@@ -10,7 +10,26 @@ describe("GET estados/ {id} /distritos", () => {
       .get("estados/33")
       .expect(200)
       .then((response) => {
-        expect(response.body.nome).toEqual("Rio de Janeiro");
+        expect(response.body.nome).toBe("Rio de Janeiro");
+      });
+  });
+  it("should return error 404 trying to find Rio de Janeiro UF", () => {
+    request(apiUrl)
+      .get("cidades/33") //altera a rota do get para uma URL que não existe no servidor, retornando assim o erro 404
+      .expect(200)
+      .then((response) => {
+        expect(response.body.nome).toBe("Rio de Janeiro");
+      });
+  });
+});
+
+describe("GET estados/{ id }/distritos", () => {
+  it("should return all districts of Rio de Janeiro", () => {
+    request(apiUrl)
+      .get("estados/33/distritos")
+      .expect(200)
+      .then((response) => {
+        console.log(response.body);
       });
   });
 });
