@@ -37,8 +37,12 @@ describe("GET /regioes-imediatas/330002|330005/distritos", () => {
     );
   });
 
-  it("should force error 502 (bad gateway) when trying to find citied around Angra and Resende", async () => {
-    const response = await request(apiUrl).get("/");
-    expect(response.status).toBe(502); //502 - bad gateway
+  it("should force error 500 (Internal Server Error) when trying to find citied around Angra and Resende", async () => {
+    const response = await request(apiUrl).get("regioes-imediatas/330002|");
+    expect(response.status).toBe(500); //500 - Internal Server Error
+    expect(response.body).toEqual({
+      message: "Internal server error",
+      statusCode: 500,
+    });
   });
 });
