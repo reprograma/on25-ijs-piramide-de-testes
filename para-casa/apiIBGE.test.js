@@ -5,29 +5,31 @@ const request = require("supertest");
 const apiUrl = "https://servicodados.ibge.gov.br/api/v1/localidades/";
 
 describe("GET estados/ {id} /distritos", () => {
-  it("should return 200 when finds Rio de Janeiro UF", async () => {
+  it("should return status 200 when finds Rio de Janeiro UF", async () => {
     const response = await request(apiUrl).get("estados/33");
     expect(response.status).toBe(200);
     expect(response.body.nome).toBe("Rio de Janeiro");
   });
   it("should return error 404 trying to find Rio de Janeiro UF", () => {
     request(apiUrl)
-      .get("cidades/33")
+      .get("cidades")
       .expect(404) //altera a rota do get para uma URL que não existe no servidor, retornando assim o erro 404
       .then((response) => {
-        expect(response.body.nome).toBe("Rio de Janeiro");
+        expect(response.body.nome).toBe(undefined);
       });
   });
 });
 
-describe("GET regioes/{ id }/municipios", () => {
-  it("should return all districts of Rio de Janeiro", async () => {
+describe("GET /regioes-imediatas/330002|330005/distritos", () => {
+  it("should return all districts of Brazil", async () => {
     await request(apiUrl)
-      .get("regioes/3/municipios")
+      .get("regioes-imediatas/330002|330005/distritos")
       .expect(200)
       .then((response) => {
-        console.log(response.status);
         console.log(response.body);
+        expect(response.body).toEqual(
+          expect.arrayContaining([expect.objectContaining({ nome: "Paraty" })])
+        );
       });
   });
 });
