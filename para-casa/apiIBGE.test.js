@@ -10,26 +10,35 @@ describe("GET estados/ {id} /distritos", () => {
     expect(response.status).toBe(200);
     expect(response.body.nome).toBe("Rio de Janeiro");
   });
-  it("should return error 404 trying to find Rio de Janeiro UF", () => {
-    request(apiUrl)
-      .get("cidades")
-      .expect(404) //altera a rota do get para uma URL que não existe no servidor, retornando assim o erro 404
-      .then((response) => {
-        expect(response.body.nome).toBe(undefined);
-      });
+
+  it("should return error 404 trying to find Rio de Janeiro UF", async () => {
+    const response = await request(apiUrl).get("estados/cidades/0");
+    expect(response.status).toBe(404); //altera a rota do get para uma URL que não existe no servidor, retornando assim o erro 404
+
+    expect(response.body.nome).toBe(undefined);
   });
 });
 
 describe("GET /regioes-imediatas/330002|330005/distritos", () => {
-  it("should return all districts of Brazil", async () => {
-    await request(apiUrl)
-      .get("regioes-imediatas/330002|330005/distritos")
-      .expect(200)
-      .then((response) => {
-        console.log(response.body);
-        expect(response.body).toEqual(
-          expect.arrayContaining([expect.objectContaining({ nome: "Paraty" })])
-        );
-      });
+  it("should return cities around Angra dos Reis and Resende regions", async () => {
+    const response = await request(apiUrl).get(
+      "regioes-imediatas/330002|330005/distritos"
+    );
+    expect(response.status).toBe(200);
+    console.log(response.status);
+    expect(response.body).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          nome: "Paraty",
+          nome: "Visconde de Mauá",
+          nome: "Angra dos Reis",
+        }),
+      ])
+    );
+  });
+
+  it("should force error 502 (bad gateway) when trying to find citied around Angra and Resende", async () => {
+    const response = await request(apiUrl).get("/");
+    expect(response.status).toBe(502); //502 - bad gateway
   });
 });
