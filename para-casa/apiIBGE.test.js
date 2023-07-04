@@ -15,7 +15,7 @@ describe("GET estados/ {id} /distritos", () => {
     const response = await request(apiUrl).get("estados/cidades/0");
     expect(response.status).toBe(404); //altera a rota do get para uma URL que não existe no servidor, retornando assim o erro 404
 
-    expect(response.body.nome).toBe(undefined);
+    expect(response.body.nome).toBeUndefined();
   });
 });
 
@@ -44,5 +44,28 @@ describe("GET /regioes-imediatas/330002|330005/distritos", () => {
       message: "Internal server error",
       statusCode: 500,
     });
+  });
+});
+
+describe("GET /paises", () => {
+  it("should return all countries name", async () => {
+    const response = await request(apiUrl).get("paises?orderBy=nome");
+    expect(response.status).toBe(200);
+    expect(response.body).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining(
+          {
+            nome: "Bahamas",
+          },
+          expect.objectContaining({ nome: "Caribe" })
+        ),
+      ])
+    );
+
+    console.log(response.status);
+    console.log(response.body);
+    //console.log(response.body.nome);
+    //console.log(response.status);
+    //expect(response.body.nome).toEqual("América Latina e Caribe");
   });
 });
