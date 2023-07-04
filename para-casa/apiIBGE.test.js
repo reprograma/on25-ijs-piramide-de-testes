@@ -77,3 +77,25 @@ describe("GET /estados", () => {
       });
   });
 });
+
+
+describe("GET Status 404 e 502 ou 503", () => {
+  it("Deve retornar status 404", (done) => {
+    request(apiUrl)
+      .get("/estado")
+      .expect(404)
+      .end((err, res) => {
+        if (err) return done(err);
+        done();
+      });
+  });
+  it("Deve retornar status 502 ou 503", (done) => {
+    request(apiUrl)
+      .get("")
+      .expect(502 || 503)
+      .end((err, res) => {
+        if (err) return done(err);
+        done();
+      });
+  });
+});
