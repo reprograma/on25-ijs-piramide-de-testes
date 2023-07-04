@@ -37,7 +37,7 @@ describe("GET /regioes-imediatas/330002|330005/distritos", () => {
     );
   });
 
-  it("should force error 500 (Internal Server Error) when trying to find citied around Angra and Resende", async () => {
+  it("should force error 500 (Internal Server Error) when trying to find cities around Angra and Resende", async () => {
     const response = await request(apiUrl).get("regioes-imediatas/330002|");
     expect(response.status).toBe(500); //500 - Internal Server Error
     expect(response.body).toEqual({
@@ -48,10 +48,10 @@ describe("GET /regioes-imediatas/330002|330005/distritos", () => {
 });
 
 describe("GET /paises", () => {
-  it("should return all countries name", async () => {
+  it("should return Bahamas and Caribe", async () => {
     const response = await request(apiUrl).get("paises?orderBy=nome");
     expect(response.status).toBe(200);
-    expect(response.body).toEqual(
+    expect(response.body).toMatchObject(
       expect.arrayContaining([
         expect.objectContaining(
           {
@@ -61,11 +61,23 @@ describe("GET /paises", () => {
         ),
       ])
     );
+  });
+});
 
+describe("GET /regioes-metropolitanas", () => {
+  it("should return 'Região Metropolitana do Vale do Rio Cuiabá'", async () => {
+    const response = await request(apiUrl).get(
+      "regioes-metropolitanas?orderBy=nome"
+    );
+    expect(response.status).toBe(200);
     console.log(response.status);
     console.log(response.body);
-    //console.log(response.body.nome);
-    //console.log(response.status);
-    //expect(response.body.nome).toEqual("América Latina e Caribe");
+    expect(response.body).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          nome: "Região Metropolitana do Vale do Rio Cuiabá",
+        }),
+      ])
+    );
   });
 });
