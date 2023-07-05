@@ -1,0 +1,40 @@
+Exercício 2 - Cenários e casos de teste:
+Escreva os cenários de teste para o [habitica](https://habitica.com/static/home), considere pelo menos duas funcionalidades descritas no [Step 1 da Wiki do Habitica](https://habitica.fandom.com/wiki/Habitica_Wiki). Os cenários de teste não precisam ser completos, mas devem contemplar as principais fluxos da funcionalidade.
+
+
+
+Cenário 01 - Criar HÁBITO.
+
+Pré-condição: Estar logado no site 'https://habitica.com/static/home'
+
+Dado que:
+- o usuário aperte o botão de 'adicionar tarefa',
+- escolha a opção 'hábito',
+- preencha um título,
+- adicione observações,
+- escolha entre positivo e negativo,
+- adicione um nível de dificuldade entre (Trivial/Fácil/Médio/Difícil),
+- insira uma etiqueta,
+- resete o contador,
+- aperte o botão 'criar',
+
+Então:
+ - um card será adicionado no primeiro card 'Hábitos'
+
+
+
+ Cenário 02 - Configurar recompensas.
+
+ Pré-condição: Estar logado no site 'https://habitica.com/static/home'
+
+ Dado que:
+- o usuário insira uma recompensa no input "Adicionar Recompensa" e aperte o 'enter';
+- Clique em 'opções',
+- clique em 'editar',
+- Confirme ou edite o título,
+- Adicione observações,
+- adicione o custo,
+- adicione etiquetas,e;
+- clique no botão 'salvar'.
+ Então:
+ - o card de recompensa deverá aparecer no card de Recompensas.
