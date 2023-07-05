@@ -1,0 +1,28 @@
+Exercícios Cenários e Casos de teste.
+
+1. Testar se o usuário consegue inserir as tarefas
+  - Inserir uma tarefa na coluna Fazer
+  - Inserir várias tarefas na coluna Fazer
+  - Inserir uma tarefa na coluna diários.
+
+2. Testar o click no lápis para ediçao
+  - Testar se adiciona as opcoes de lista de verificaçao
+  - Testar se adiciona as opcoes de datas de vencimento
+  - Testar se adiciona as opcoes de outras opcoes disponiveis
+
+3. Testar a coluna diários
+  - Inserir tarefas na coluna diários
+  - Testar opçao editar 
+  - Testar se a tarefa se repete cada días
+
+4. Testar a coluna hábitos
+  - Inserir tarefas na coluna hábitos
+  - Testar opçao editar pata bom hábito
+  - Testar opçao editar pata mau hábito
+
+5. Testar gaming
+  - testar adicionar uma guloseima como motivação na coluna recompensas
+  - testar uma recompensa oferecida no jogo
+  - testar adicionar uma atividade como motivação na coluna recompensas
+
+ 
