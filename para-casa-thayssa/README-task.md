@@ -2,7 +2,6 @@
 ## Testes de Integração e Cenários/casos de teste
 
 ## Cenário de teste 1 - Configurar tarefas
-
 # Caso de teste - inserir tarefa na To Do List
 * Objetivo: Inserir uma tarefa na lista de afazeres.
 * Passos: Antes de colocar a mão na prática, vamos primeiro decidir qual tarefa será adicionada. Após ter escolhido a tarefa, abrir a To Do List e conferir se esta tarefa já foi adicionada previamente (para evitar duplicidade), caso não esteja, clicar no botão "Adicionar tarefa" e digitar a tarefa desejada, depois disso, apertar o enter ou salvar.
@@ -17,8 +16,7 @@
 
 
 ------------
-## Cen�rio de teste 2 - Configurar hábitos
-
+## Cenário de teste 2 - Configurar hábitos
 # Caso de teste - adicionar tipos diferentes recompensas (atividades e gulosemas)
 * Objetivo: Verificar se é possível adicionar mais de um tipo de recompensa como motivação.
 * Passos: Abra a lista com as tarefas, clicar no botão "Adicionar recompensa", digitar a primeira recompensa de "atividades divertidas e, em seguida, digitar a recompensa de guloseimas. Após digitadas, aperte o botão de enter ou salvar.
