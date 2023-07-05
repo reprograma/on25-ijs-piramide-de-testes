@@ -4,7 +4,7 @@
   "description": "## Testes de Integração e Cenários/casos de teste",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
