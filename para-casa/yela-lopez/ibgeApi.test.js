@@ -18,12 +18,14 @@ describe("GET /localidades and more information from IBGEs site", () =>{
 })
 
 describe("GET /estados/33/municipios ", () => {
-    it("Should return 200 when find municipio de Andra dos Reis", () => {
+    it("Should return 200 when find municipio de Ariquemes", () => {
         request(apiUrl)
         .get("municipios?view=nivelado")
         .expect(200)
         .then(response => {
-            expect(response.body.municipio-nome).toEqual("Angra dos Reis")
+           
+            expect(response.body).toEqual(expect.arrayContaining([expect.objectContaining({"municipio-nome": "Ariquemes"})]))
+
         })  
     })
 })
