@@ -3,7 +3,6 @@
 const request = require('supertest');
 const apiUrl = 'http://servicodados.ibge.gov.br/api/docs/localidades';
 
-
 describe("Get /estados/{UF}", () => {
     it("Should return a status error 404 when an invalid UF are requested", () => {
         request(apiUrl)
