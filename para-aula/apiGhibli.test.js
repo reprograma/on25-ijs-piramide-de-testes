@@ -38,10 +38,3 @@ describe('Teste Api Ghibli get/films/{id}', () => {
 
 
 
-// describe("GET /id", () => {
-//     it("should return a 200 status if '_id' is invalid", async ()=> {
-       
-//         const res = await request(ApiUrl).get('/films/58611129-2dbc-4a81-a72f-77ddfc1b');
-//         expect(res.status).toBe(404);
-//     })
-// })
