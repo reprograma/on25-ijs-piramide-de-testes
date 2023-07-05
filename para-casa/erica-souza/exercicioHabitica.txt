@@ -1,0 +1,35 @@
+CENÁRIO DE TESTES – HABITICA
+
+Teste Inicial -  Fazer login
+-	Abrir o site no navegador
+-	Digitar email corretamente
+-	Inserir senha corretamente
+-	Clicar no botão de login
+
+Cenário: Configuração de Hábitos
+1.	Clicar no botão ‘Adicionar tarefa’
+2.	Selecionar a opção ‘Hábito’
+3.	Escrever um título
+4.	Opcional: Clicar em + para positivo e – para negativo
+5.	Clicar no botão ‘criar’
+
+Cenário: Configuração de Diárias
+1.	Clicar no botão ‘Adicionar tarefa’
+2.	Selecionar a opção ‘Diária
+3.	Escrever um título
+4.	Clicar no botão ‘criar’
+
+Cenário: Configuração de Afazeres
+1.	Clicar no botão ‘Adicionar tarefa’
+2.	Selecionar a opção ‘Afazer’
+3.	Escrever um título
+4.	Clicar no botão ‘criar’
+
+Cenário: Configuração de Afazeres com Nível de Dificuldade Difícil 
+
+1.	Clicar no botão ‘adicionar tarefa’
+2.	Selecionar a opção ‘Afazer’
+3.	Escrever um título
+4.	Clicar em ‘Nível de Dificuldade’
+5.	Selecionar opção desejada: “Difícil”
+6.	Clicar no botão ‘criar’
