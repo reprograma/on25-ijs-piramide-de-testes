@@ -1,3 +1,37 @@
+# Habitica
+
+
+Teste 
+
+acessar tela do usuario
+clicar botão To Do's, deve abrir a sessão to-do list
+deve aparecer a lista TO Do criada pelo usúario
+clicar botão mais crir nove card
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Exercício de Casa 🏠 
 
 ## Testes de Integração e Cenários/casos de teste
