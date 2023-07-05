@@ -1,12 +1,15 @@
-# Habitica
+ # Habitica
 
 
 Teste 
 
-acessar tela do usuario
-clicar botão To Do's, deve abrir a sessão to-do list
-deve aparecer a lista TO Do criada pelo usúario
-clicar botão mais crir nove card
+Cenario criar cards TO-DO
+
+- acessar tela do usuario
+- função para criar novo card TODO se os campos estão com string vazias.
+- validação para não criar novo card TODO se nenhum campo do form foi preenchido,
+- valiadar se campo Task Title for preenchido, permite criar um card;
+- clicar botão mais crir nove card
 
 
 
