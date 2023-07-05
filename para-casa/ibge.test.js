@@ -7,13 +7,12 @@ describe("testing IBGE end points", () => {
         expect(response.body.nome).toEqual("Rio de Janeiro");    
     })
 
-    it("should match regex that matches the IBGE json", async () => {
+    it("should match regex that matches the IBGE json", async () => { // A ideia desse teste era passar um regex que servisse para o Json de distritos e usar o toMatch, mas não está funcionando
         const regex = /\{[^{}]*\}/
         const response = await request(apiURL)
-        
         .get("distritos?orderBy=nome")
         .expect(200)
-        expect(response.body.array).toMatch(regex.toString())
+        expect(response.body.array).toMatch(regex)
 
     })
 
@@ -40,5 +39,11 @@ describe("testing IBGE end points", () => {
         expect(response.body).toEqual(expect.arrayContaining([expect.objectContaining({"nome": "Brasil"})]))
     
     })
+
+    it('should return 404 Bad Request for invalid data', async () => { // não está funcionando, continua recebendo 200
+        const response = await request(apiURL)
+        .get("paises/1000000")
+        expect(response.status).toEqual(404);
+      });
 })
 
