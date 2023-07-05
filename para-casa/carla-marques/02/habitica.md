@@ -43,7 +43,7 @@ E subo de Nível
 E sou recompensada com Ouro, Experiência e itens   
 E o card desaparece do tab de "Ativas"  
 
-**Cenário 6: Não realizando uma diária**
+**Cenário 6: Não realizando uma diária**  
 DADO QUE estou logado no sistema  
 E estou no dia posterior ao cadastro  
 QUANDO não habilito o checkbox do card que cadastrei  
