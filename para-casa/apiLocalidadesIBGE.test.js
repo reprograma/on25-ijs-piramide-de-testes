@@ -13,6 +13,17 @@ describe("GET /estados", () => {
     })
 })
 
+describe("GET /estados", () => {
+    it("should return 404 when it does not find state of SP.", async () => {
+        await request(apiUrl)
+        .get('estados')
+        .expect(400)
+        .then(response => {
+            expect(response.status).toEqual(404)
+        })
+    })
+})
+
 describe("GET /distritos/{id}", () => {
     it("it should return 200 when it finds the district of Fazendinha.", async () => {
         await request(apiUrl)
@@ -28,11 +39,10 @@ describe("GET /distritos/{id}", () => {
 describe("GET /distritos/{id}", () => {
     it("should return 404 when it does not find the Fazendinha district.", async () => {
         await request(apiUrl)
-        .get('distritos/160030312')
+        .get('distritos/')
         .expect(404)
         .then(response => {
-            expect(response.body).toEqual(expect.arrayContaining([expect.objectContaining({
-                "nome":"Fazendinha"})]))
+            expect(response.status).toEqual(404)
         })
     })
 })
