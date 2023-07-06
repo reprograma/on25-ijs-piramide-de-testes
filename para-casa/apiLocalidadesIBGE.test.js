@@ -1,14 +1,14 @@
 const request = require('supertest');
 const apiUrl = "http://servicodados.ibge.gov.br/api/v1/localidades/"
 
-describe("GET /estados/{UF}/distritos", () => {
+describe("GET /estados", () => {
     it("should return 200 when find state of SP.", async () => {
         await request(apiUrl)
-        .get('estados/35/distritos')
+        .get('estados?orderBy=nome')
         .expect(200)
         .then(response => {
             expect(response.body).toEqual(expect.arrayContaining([expect.objectContaining({
-                UF: {"nome":"São Paulo"}})]))
+                "sigla":"SP"})]))
         })
     })
 })
