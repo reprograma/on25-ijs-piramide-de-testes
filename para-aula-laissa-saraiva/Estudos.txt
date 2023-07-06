@@ -1,0 +1,48 @@
+Referencias: https://www.youtube.com/watch?v=wEDiOYsiWaU&t=1536s
+
+Ferramentas Utilizadas:
+Jest - ferramenta para execução e desenvolvimento de Testes escritos em Javascript. Muito utilizado em testes de Unidades.(Projetos Frontend)
+
+O jest pode ser utilizado sozinho ou com algumas bibliotecas.
+https://jestjs.io/pt-BR/docs/getting-started
+
+
+Supertest - ferramenta feita para Testes de API.
+Biblioteca para interagir com Apis + recursos voltados para teste
+eX: AXIOUS (NODE)
+Bibliotecas com mais recursos - freezbe/Paptun
+
+
+Fundamentos (Importante estudar)
+
+Protocolos HTTP:
+Códigos de Status:
+Informações que enviamos = requisição (request)
+Informações que recebemos = recebe (response)
+
+Exercício: 
+swapi.dev
+
+Api responsável por buscar informações entre cliente e servidor.
+
+- Comandos para instalação de um projeto
+npm init --yes
+
+- Comando para instalar o jest
+npm instaal -D jest
+
+- Para testar se foi instalado
+npx jest
+Node package executer
+
+Expect 
+https://jestjs.io/pt-BR/docs/expect
+
+Instalando o superteste
+npm install -D supertest
+
+
+Conceito = assincronismo + proomessas
+Async + promisses
+
+await
