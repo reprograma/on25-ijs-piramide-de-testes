@@ -1,6 +1,5 @@
 # Exercício 2 - Cenários e casos de teste 🏠
 
-
 ## Cenário de teste 1a - Configurar tarefas
 
 ### Caso de teste 1 - inserir uma tarefa:
@@ -13,7 +12,8 @@ Resultado esperado: a tarefa foi adicionada na coluna To Do.
 
 ### Caso de teste 2 - inserir mais de uma tarefa:
 1. Decidir o que listar.
-2. Digitar na caixa de texto os itens que você deseja incluir na coluna To Do separando-os por vírgulas.3. Pressionar Enter ou apertar o botão.
+2. Digitar na caixa de texto os itens que você deseja incluir na coluna To Do separando-os por vírgulas.
+3. Pressionar Enter ou apertar o botão.
 
 Resultado esperado: as tarefas não serão adicionadas na coluna To Do.
 
