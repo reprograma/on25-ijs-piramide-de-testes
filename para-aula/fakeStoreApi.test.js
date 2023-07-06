@@ -33,3 +33,14 @@ describe("GET /users", () => {
     })
   })
 });
+
+describe("GET /users", () => {
+  it("Should return 200 when find a user email", () => {
+    request(apiUrl)
+    .get("users/1")
+    .expect(200)
+    .then(response => {
+      expect(response.body.email).toContain("john@gmail.com")
+    })
+  })
+});
