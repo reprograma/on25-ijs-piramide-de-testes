@@ -33,7 +33,7 @@ describe("GET /estados", () => {
 
   it("should return Rio de Janeiro with id 33", () => {
     request(apiUrl)
-    .get("/api/v1/localidades/estados?orderBy=nome")
+    .get("/api/v1/localidades/estados/33")
     .expect(200)
     .then(response => {
       expect(response.body.nome).toEqual("Rio de Janeiro")
