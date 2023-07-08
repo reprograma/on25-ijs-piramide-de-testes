@@ -27,9 +27,9 @@ Bônus: se você precisar de inspiração sobre quais tarefas adicionar, consult
 
 Terminou o exercício? Dá uma olhada nessa checklist e confere se tá tudo certinho, combinado?!
 
-- [ ] Fiz o fork do repositório.
-- [ ] Clonei o fork na minha máquina (`git clone url-do-meu-fork`).
-- [ ] Criei minha branch (` git checkout -b nome-sobrenome `)
+- [x] Fiz o fork do repositório.
+- [x] Clonei o fork na minha máquina (`git clone url-do-meu-fork`).
+- [] Criei minha branch (` git checkout -b nome-sobrenome `)
 - [ ] Criei a pasta com o meu nome dentro da pasta entregas (` mkdir nome-sobrenome`)
 - [ ] Resolvi o exercício dentro da minha pasta. Como no [exemplo](/on21-imersao-js-S1-TDD/exercicios/para-casa/entregas/exemplo-nome-sobrenome/).
 - [ ] Adicionei as mudanças. (`git add .` para adicionar todos os arquivos, ou `git add nome_do_arquivo` para adicionar um arquivo específico)
